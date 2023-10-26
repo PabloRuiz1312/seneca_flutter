@@ -8,13 +8,13 @@ class LocalUserModel
   final String name;
   final String center;
 
-  LocalUserModel({required this.nameUser,required this.passwd,required this.name,required this.center,});
+  LocalUserModel({required this.nameUser,required this.passwd,this.name="Unknown",this.center="Unknown",});
 
   factory LocalUserModel.fromJson(Map<String,dynamic> json) => LocalUserModel(
-    nameUser: json["nameUser"],
-    passwd: json["passwd"],
-    name: json["name"],
-    center: json["center"]
+    nameUser: json["nameUser"] ?? "404",
+    passwd: json["passwd"] ?? "404",
+    name: json["name"] ?? "Unknown",
+    center: json["center"] ?? "Unknown"
   );
 
   UserRegister toUserRegisterEntity()=> UserRegister(

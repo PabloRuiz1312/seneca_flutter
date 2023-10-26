@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seneca_flutter/config/widgets/text_widget/text_passwd.dart';
 import 'package:seneca_flutter/config/widgets/text_widget/text_user.dart';
+import 'package:seneca_flutter/infrastructure/models/local_users_model.dart';
 const List<Color> colors  = [ Color.fromRGBO(255, 255, 255, 1),
                               Color.fromARGB(193, 55, 70, 239)];
 const MaterialStateProperty <Color> botonBlanco = MaterialStatePropertyAll(Color.fromRGBO(255, 255, 255, 1));
