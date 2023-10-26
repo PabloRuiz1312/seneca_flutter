@@ -39,7 +39,10 @@ class HomeScreen extends StatelessWidget {
             miniSeparator,
             SizedBox(width: MediaQuery.of(context).size.width*0.8,child: passwdText),
             miniSeparator,
-            FilledButton(onPressed: (){},
+            FilledButton(onPressed: (){
+              userText.textContol.clear();
+              passwdText.textContol.clear();
+            },
              style:  ButtonStyle(backgroundColor:botonBlanco,
              shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
              fixedSize: sizeBoton
@@ -53,9 +56,9 @@ class HomeScreen extends StatelessWidget {
             ),
             gigaSeparator,
            ListTile(
-            leading: Image.asset("assets/images/imagenJunta.png"),
-            title: const Text("Junta de Andalucia"),
-            subtitle: const Text("Consejería de Educacion y Deporte"),
+            //leading: Image.asset("assets/images/imagenJunta.png"),
+            title: Text("Junta de Andalucia",style: TextStyle(color: colors[0]),),
+            subtitle:  Text("Consejería de Educacion y Deporte",style: TextStyle(color: colors[0])),
            )
             
             
