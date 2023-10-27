@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:seneca_flutter/config/widgets/text_widget/text_passwd.dart';
 import 'package:seneca_flutter/config/widgets/text_widget/text_user.dart';
 import 'package:seneca_flutter/infrastructure/models/local_users_model.dart';
+import 'package:seneca_flutter/presentation/screens/provider/user_provider.dart';
 const List<Color> colors  = [ Color.fromRGBO(255, 255, 255, 1),
                               Color.fromARGB(193, 55, 70, 239)];
 const MaterialStateProperty <Color> botonBlanco = MaterialStatePropertyAll(Color.fromRGBO(255, 255, 255, 1));
@@ -41,6 +42,8 @@ class HomeScreen extends StatelessWidget {
             SizedBox(width: MediaQuery.of(context).size.width*0.8,child: passwdText),
             miniSeparator,
             FilledButton(onPressed: (){
+              UserProvider checker = UserProvider();
+              checker.checkUser(userText.textContol.value.text, passwdText.textContol.value.text);
               userText.textContol.clear();
               passwdText.textContol.clear();
             },
