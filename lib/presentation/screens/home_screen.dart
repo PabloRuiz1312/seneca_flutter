@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:seneca_flutter/config/widgets/text_widget/text_passwd.dart';
 import 'package:seneca_flutter/config/widgets/text_widget/text_user.dart';
+import 'package:seneca_flutter/domain/entities/user_register.dart';
 import 'package:seneca_flutter/infrastructure/models/local_users_model.dart';
+import 'package:seneca_flutter/presentation/screens/main_screen.dart';
 import 'package:seneca_flutter/presentation/screens/provider/user_provider.dart';
 const List<Color> colors  = [ Color.fromRGBO(255, 255, 255, 1),
                               Color.fromARGB(193, 55, 70, 239)];
@@ -27,8 +29,7 @@ class HomeScreen extends StatelessWidget {
       height: MediaQuery.of(context).size.height / 80,
       width: double.infinity,
       );
-
-      
+      UserProvider checker = UserProvider();
     return Scaffold(
       backgroundColor: const Color.fromARGB(193, 55, 70, 239),
       body: SingleChildScrollView(
@@ -42,8 +43,14 @@ class HomeScreen extends StatelessWidget {
             SizedBox(width: MediaQuery.of(context).size.width*0.8,child: passwdText),
             miniSeparator,
             FilledButton(onPressed: (){
-              UserProvider checker = UserProvider();
-              checker.checkUser(userText.textContol.value.text, passwdText.textContol.value.text);
+              
+              //checker.checkUser(userText.textContol.value.text, passwdText.textContol.value.text);
+              bool check = checker.check(userText.textContol.value.text, passwdText.textContol.value.text);
+              if(check==true)
+              {
+                UserRegister userHome = checker.sendUser(userText.textContol.value.text, passwdText.textContol.value.text);
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainScreen(user: userHome)));
+              }
               userText.textContol.clear();
               passwdText.textContol.clear();
             },
