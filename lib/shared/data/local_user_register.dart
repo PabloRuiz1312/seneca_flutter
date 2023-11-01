@@ -20,5 +20,12 @@ List <Map<String,dynamic>> userRegisters = [
     "name":"Usuario Prueba",
     "center":"IES Prueba",
     "rol":"Usuario prueba"
+  },
+  {
+    "nameUser":"x",
+    "passwd":"x",
+    "name":"x",
+    "center":"x",
+    "rol":"x"
   }
 ];
