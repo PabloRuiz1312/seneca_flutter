@@ -1,0 +1,198 @@
+{
+  "project_info": {
+    "project_number": "578933238318",
+    "project_id": "loggin-875bd",
+    "storage_bucket": "loggin-875bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578933238318:android:590d05a944e15b17a7cdbf",
+        "android_client_info": {
+          "package_name": "com.example.firebase_google_sign_in_tutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578933238318-lr29aotht5tjh93jhgt7po0nmf5s2dkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaTiQTrPIwc7F_3YaiGcGEbBoHIPYGqkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578933238318-lr29aotht5tjh93jhgt7po0nmf5s2dkg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "578933238318-1aptloe2hostn7d7ogsk7v4s8hasp5ac.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.firebaseGoogleSignInTutorial"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578933238318:android:bfbb0d781e47ed33a7cdbf",
+        "android_client_info": {
+          "package_name": "com.example.loggin_google"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578933238318-lr29aotht5tjh93jhgt7po0nmf5s2dkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaTiQTrPIwc7F_3YaiGcGEbBoHIPYGqkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578933238318-lr29aotht5tjh93jhgt7po0nmf5s2dkg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "578933238318-1aptloe2hostn7d7ogsk7v4s8hasp5ac.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.firebaseGoogleSignInTutorial"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578933238318:android:f0e9763347cd6e2ca7cdbf",
+        "android_client_info": {
+          "package_name": "com.example.loggin_google_v2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578933238318-2a1ujh984glib7ev7g6aklushqa1d6fe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.loggin_google_v2",
+            "certificate_hash": "9cb0e6e46ec35488a19d8e313a4c65399ec812a2"
+          }
+        },
+        {
+          "client_id": "578933238318-lr29aotht5tjh93jhgt7po0nmf5s2dkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaTiQTrPIwc7F_3YaiGcGEbBoHIPYGqkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578933238318-lr29aotht5tjh93jhgt7po0nmf5s2dkg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "578933238318-1aptloe2hostn7d7ogsk7v4s8hasp5ac.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.firebaseGoogleSignInTutorial"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578933238318:android:f77812ea3fda4d4fa7cdbf",
+        "android_client_info": {
+          "package_name": "com.example.login_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578933238318-lr29aotht5tjh93jhgt7po0nmf5s2dkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaTiQTrPIwc7F_3YaiGcGEbBoHIPYGqkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578933238318-lr29aotht5tjh93jhgt7po0nmf5s2dkg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "578933238318-1aptloe2hostn7d7ogsk7v4s8hasp5ac.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.firebaseGoogleSignInTutorial"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578933238318:android:2b7334797ad86257a7cdbf",
+        "android_client_info": {
+          "package_name": "com.example.seneca_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578933238318-lr29aotht5tjh93jhgt7po0nmf5s2dkg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaTiQTrPIwc7F_3YaiGcGEbBoHIPYGqkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578933238318-lr29aotht5tjh93jhgt7po0nmf5s2dkg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "578933238318-1aptloe2hostn7d7ogsk7v4s8hasp5ac.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.firebaseGoogleSignInTutorial"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

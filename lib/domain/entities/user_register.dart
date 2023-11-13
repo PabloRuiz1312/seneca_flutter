@@ -5,6 +5,9 @@ class UserRegister
   final String name;
   final String center;
   final String rol;
+  final String? nameGoogle;
+  final String? email;
 
-  UserRegister({required this.nameUser,required this.passwd, required this.name, required this.center,required this.rol});
+  UserRegister({this.nameUser="Unknow",this.passwd="Unknow",this.name="Unknow",this.center="Unknow",this.rol="Unknow",this.nameGoogle="Unknown",this.email="Unknow"});
+
 }

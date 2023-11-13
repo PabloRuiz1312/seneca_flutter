@@ -30,7 +30,6 @@ class UserProvider extends ChangeNotifier
   }
   bool check(String userName,String passwd) 
   {
-    sleep(const Duration(seconds: 2));
     bool userFound = false;
     final List <UserRegister> newUsers = userRegisters.map(
       (user) => LocalUserModel.fromJson(user).toUserRegisterEntity()

@@ -1,10 +1,14 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:seneca_flutter/config/widgets/text_widget/text_passwd.dart';
 import 'package:seneca_flutter/config/widgets/text_widget/text_user.dart';
 import 'package:seneca_flutter/domain/entities/user_register.dart';
 import 'package:seneca_flutter/infrastructure/models/local_users_model.dart';
 import 'package:seneca_flutter/presentation/screens/main_screen.dart';
 import 'package:seneca_flutter/presentation/screens/provider/user_provider.dart';
+import 'package:seneca_flutter/services/firebase_service.dart';
 const List<Color> colors  = [ Color.fromRGBO(255, 255, 255, 1),
                               Color.fromARGB(193, 55, 70, 239)];
 const MaterialStateProperty <Color> botonBlanco = MaterialStatePropertyAll(Color.fromRGBO(255, 255, 255, 1));
@@ -17,6 +21,7 @@ class HomeScreen extends StatelessWidget {
   TextPasswd passwdText = TextPasswd();
   @override
   Widget build(BuildContext context) {
+      User? result = FirebaseAuth.instance.currentUser;
       final separator = Container(
       height: MediaQuery.of(context).size.height / 20,
       width: double.infinity,
@@ -29,6 +34,12 @@ class HomeScreen extends StatelessWidget {
       height: MediaQuery.of(context).size.height / 80,
       width: double.infinity,
       );
+      final miniHeightSeparator = Container(
+        width: MediaQuery.of(context).size.width / 80,
+        height: double.infinity);
+      final heightSeparator = Container(
+        width: MediaQuery.of(context).size.width / 20,
+        height: double.infinity);
       UserProvider checker = UserProvider();
     return Scaffold(
       backgroundColor: const Color.fromARGB(193, 55, 70, 239),
@@ -60,9 +71,42 @@ class HomeScreen extends StatelessWidget {
              ),
              child: Text("Entrar",style: TextStyle(color:colors[1]),)
             ),
+            miniSeparator,
+            Text("O",style: TextStyle(color: colors[0],)),
+            miniSeparator,
+            FilledButton(onPressed: () async{
+              if(result == null)
+              {
+                FirebaseService service = FirebaseService();
+                try
+                {
+                  await service.signInWithGoogle();
+                  UserRegister user = UserRegister(nameGoogle: result?.displayName,email: result?.email);
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainScreen(user: user)));
+                  
+                }
+                catch(e)
+                {
+                  if(e is FirebaseAuthException)
+                  {
+                    print(e.message);
+                  }
+                }
+              }
+            },
+            style:  ButtonStyle(backgroundColor:botonBlanco,
+             shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
+             fixedSize: sizeBoton
+             ),
+            child: Row(children: [
+              heightSeparator,
+              Text("Iniciar sesion con google",style: TextStyle(color: colors[1]),),
+              miniHeightSeparator,
+              Icon( FontAwesomeIcons.google,color:colors[1],)
+            ],)),
             separator,
             FilledButton.tonal(onPressed: (){}, 
-             style: ButtonStyle(backgroundColor:botonTransparente),
+             style: const ButtonStyle(backgroundColor:botonTransparente),
             child: Text("No recuerdo mi contraseña",style: TextStyle(color: colors[0],),)
             ),
             gigaSeparator,
