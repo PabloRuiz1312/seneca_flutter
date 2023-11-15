@@ -26,5 +26,21 @@ class LocalUserModel
     center: center,
     rol: rol
     );
+  
+  //PARTE PARA EL PROVIDER DE GOOGLE SHEET
+
+  factory LocalUserModel.toJson(dynamic json) => LocalUserModel(
+      name: json["nombre"] ?? "404",
+      nameUser: json["usuario"] ?? "404",
+      passwd: json["passwd"] ?? "404"
+  );
+
+  Map<String,dynamic> toUserSheetEntity()=>
+  {
+    name:name,
+    nameUser:nameUser,
+    passwd:passwd
+  };
+
 }
 

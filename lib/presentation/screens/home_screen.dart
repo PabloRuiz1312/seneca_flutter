@@ -56,10 +56,17 @@ class HomeScreen extends StatelessWidget {
             FilledButton(onPressed: (){
               
               //checker.checkUser(userText.textContol.value.text, passwdText.textContol.value.text);
-              bool check = checker.check(userText.textContol.value.text, passwdText.textContol.value.text);
+              //bool check = checker.check(userText.textContol.value.text, passwdText.textContol.value.text);
+              bool check  = checker.checkSheetUser(userText.textContol.value.text, passwdText.textContol.value.text);
+              
+              // if(check==true)
+              // {
+              //   UserRegister userHome = checker.sendUser(userText.textContol.value.text, passwdText.textContol.value.text);
+              //   Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainScreen(user: userHome)));
+              // }
               if(check==true)
               {
-                UserRegister userHome = checker.sendUser(userText.textContol.value.text, passwdText.textContol.value.text);
+                UserRegister userHome = checker.sendSheetUser(userText.textContol.value.text, passwdText.textContol.value.text);
                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainScreen(user: userHome)));
               }
               userText.textContol.clear();
