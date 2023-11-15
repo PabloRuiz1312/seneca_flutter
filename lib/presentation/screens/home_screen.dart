@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
   TextPasswd passwdText = TextPasswd();
   @override
   Widget build(BuildContext context) {
-      User? result = FirebaseAuth.instance.currentUser;
+    
       final separator = Container(
       height: MediaQuery.of(context).size.height / 20,
       width: double.infinity,
@@ -75,24 +75,41 @@ class HomeScreen extends StatelessWidget {
             Text("O",style: TextStyle(color: colors[0],)),
             miniSeparator,
             FilledButton(onPressed: () async{
-              if(result == null)
-              {
-                FirebaseService service = FirebaseService();
-                try
-                {
-                  await service.signInWithGoogle();
-                  UserRegister user = UserRegister(nameGoogle: result?.displayName,email: result?.email);
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainScreen(user: user)));
+              
+              FirebaseService service = FirebaseService();
+                      try {
+                      await service.signInWithGoogle();
+                        User? userGoogle = FirebaseAuth.instance.currentUser;
+                        if(userGoogle!=null)
+                        {
+                          UserRegister user = UserRegister(nameGoogle: userGoogle.displayName,email: userGoogle.email);
+                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainScreen(user: user)));
+
+                        }
+                        } catch(e){
+                          if(e is FirebaseAuthException){
+                            
+                          }
+                        }
+              //   FirebaseService service = FirebaseService();
+              //   await service.signInWithGoogle();
+              //   User? result = FirebaseAuth.instance.currentUser;
+              // if(result != null)
+              // {
+              //   try
+              //   {
+              //     UserRegister user = UserRegister(nameGoogle: result.displayName,email: result.email);
+              //     Navigator.of(context).push(MaterialPageRoute(builder: (context) => MainScreen(user: user)));
                   
-                }
-                catch(e)
-                {
-                  if(e is FirebaseAuthException)
-                  {
-                    print(e.message);
-                  }
-                }
-              }
+              //   }
+              //   catch(e)
+              //   {
+              //     if(e is FirebaseAuthException)
+              //     {
+              //       print(e.message);
+              //     }
+              //   }
+              // }
             },
             style:  ButtonStyle(backgroundColor:botonBlanco,
              shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),

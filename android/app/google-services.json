@@ -166,6 +166,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "578933238318-m562vj7cngimb6hudqilp30leuj8rmh3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.seneca_flutter",
+            "certificate_hash": "9cb0e6e46ec35488a19d8e313a4c65399ec812a2"
+          }
+        },
+        {
           "client_id": "578933238318-lr29aotht5tjh93jhgt7po0nmf5s2dkg.apps.googleusercontent.com",
           "client_type": 3
         }

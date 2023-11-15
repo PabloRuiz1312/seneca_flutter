@@ -27,6 +27,7 @@ class FirebaseService
     on FirebaseAuthException catch (e)
     {
       print(e.message);
+      throw e;
     }
     return null;
   }
